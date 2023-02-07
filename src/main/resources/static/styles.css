@@ -4,23 +4,23 @@
  * Essential Structure *
  ***********************/
 .flexsearch--wrapper {
-	height: auto;
-	width: auto;
-	max-width: 100%;
-	overflow: hidden;
-	background: transparent;
-	margin: 0;
-	position: static;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  background: transparent;
+  margin: 0;
+  position: static;
 }
 
 .flexsearch--form {
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .flexsearch--input-wrapper {
-	padding: 0 65px 0 0;
-	overflow: hidden;
+  padding: 0 65px 0 0;
+  overflow: hidden;
 }
 
 .flexsearch--input {
@@ -34,40 +34,43 @@
   padding: 0 200px 0 200px;
 }
 
-.flexsearch--input, #icons, .company_name{
-    display: flex;
-    align-items: center;
+.flexsearch--input,
+#icons,
+.company_name {
+  display: flex;
+  align-items: center;
 }
+
 .flexsearch--input {
   -webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
- 	height: 35px;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 35px;
   padding: 0 45px 0 11px;
-	border-color: #888;
+  border-color: #888;
   border-radius: 35px;
   border-style: solid;
-	border-width: 4px;
+  border-width: 4px;
   margin-top: 10px;
   color: #333;
   font-family: 'Arial', sans-serif;
-	font-size: 25px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+  font-size: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .flexsearch--submit {
   position: absolute;
-	right: 0;
-	top: 0;
-	display: block;
-	width: 60px;
-	height: 60px;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
   padding: 0;
   border: none;
-	margin-top: 2px;
+  margin-top: 2px;
   margin-right: 10px;
-	background: transparent;
+  background: transparent;
   color: #888;
   font-family: 'Helvetica', sans-serif;
   font-size: 45px;
@@ -80,7 +83,7 @@
 }
 
 .flexsearch--input:focus.flexsearch--submit {
- 	color: #333;
+  color: #333;
 }
 
 .flexsearch--submit:hover {
@@ -89,7 +92,7 @@
 }
 
 ::-webkit-input-placeholder {
-	color: #888;
+  color: #888;
 }
 
 input:-moz-placeholder {
@@ -108,81 +111,84 @@ input:-moz-placeholder {
 }
 
 
-#icons{
-    margin-top: 7px;
-    align-items:end;
-    float: right;
+#icons {
+  margin-top: 7px;
+  align-items: end;
+  float: right;
 }
 
-#encabezado{
-    margin: 15px 10px 10px 10px;
+#encabezado {
+  margin: 15px 10px 10px 10px;
 }
 
-.buttons{
-    margin-top: 20px;
-    text-align: center;
+.buttons {
+  margin-top: 20px;
+  text-align: center;
 
 }
-#but{
-    display:inline;
-    font-family: Rockwell;
-    font-style: normal;
-    font-size: 20px;
-    padding: 10px;
-    border: 0;
-    outline: none;
-    background: none;
+
+#but {
+  display: inline;
+  font-family: Rockwell;
+  font-style: normal;
+  font-size: 20px;
+  padding: 10px;
+  border: 0;
+  outline: none;
+  background: none;
 }
 
-#footer{
-    background-color: rgb(223, 218, 207);
-    text-align: center;
-    letter-spacing: 5px;
-    padding-left: 35px;
-    padding-top: 10px;
-    padding-bottom: 6px;
-    margin-top: 5px;
-    margin-left: -0.1in;
-    margin-right: -0.08in;
-}
-#title{
-    text-align: center;
-    color: rgb(1,1,0);
+#footer {
+  background-color: rgb(223, 218, 207);
+  text-align: center;
+  letter-spacing: 5px;
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  margin-top: 5px;
+  margin-left: -0.1in;
+  margin-right: -0.08in;
 }
 
-.textoInformativo{
-    text-align: justify-all;
-    margin-left: 180px;
-    margin-right: 180px;
+#title {
+  text-align: center;
+  color: rgb(1, 1, 0);
 }
 
-p{
-  color: rgb(1,1,0);
+.textoInformativo {
+  text-align: justify-all;
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
-#Registro{
-    text-align: center;
-    color: burlywood;
+p {
+  color: rgb(1, 1, 0);
 }
 
-#loginform{
-    text-align: center;
-    color: burlywood;
+#Registro {
+  text-align: center;
+  color: burlywood;
 }
 
-#tips h2{
-    text-align: left;
-    color: burlywood;
+#loginform {
+  text-align: center;
+  color: burlywood;
 }
+
+#tips h2 {
+  text-align: left;
+  color: burlywood;
+}
+
 .pie-form {
-    font-size: 90%;
-    text-align: center;    
-    margin-top: 15px;
+  font-size: 90%;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .pie-form a {
-    display: block;
-    text-decoration: none;
-    color: burlywood;
-    margin-bottom: 3px;
+  display: block;
+  text-decoration: none;
+  color: burlywood;
+  margin-bottom: 3px;
 }
