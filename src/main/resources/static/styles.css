@@ -110,7 +110,7 @@ input:-moz-placeholder {
 
 #icons{
     margin-top: 7px;
-    align-items: right;
+    align-items:end;
     float: right;
 }
 
@@ -128,7 +128,7 @@ input:-moz-placeholder {
     font-family: Rockwell;
     font-style: normal;
     font-size: 20px;
-    padding: 10;
+    padding: 10px;
     border: 0;
     outline: none;
     background: none;
@@ -147,7 +147,7 @@ input:-moz-placeholder {
 }
 #title{
     text-align: center;
-    color: rgb(1,1,0)"
+    color: rgb(1,1,0);
 }
 
 .textoInformativo{
@@ -158,4 +158,31 @@ input:-moz-placeholder {
 
 p{
   color: rgb(1,1,0);
+}
+
+#Registro{
+    text-align: center;
+    color: burlywood;
+}
+
+#loginform{
+    text-align: center;
+    color: burlywood;
+}
+
+#tips h2{
+    text-align: left;
+    color: burlywood;
+}
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: burlywood;
+    margin-bottom: 3px;
 }

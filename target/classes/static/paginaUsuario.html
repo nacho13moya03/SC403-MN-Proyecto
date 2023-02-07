@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <link href="info_styles.css" rel="stylesheet" type="text/css"/>
+        <title>Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav id="encabezado">
+            <h1 class="company_name">Sincronias</h1>
+              <div id="icons">
+                  <a><img src="sources/like.png"></a>
+                  <a href="login.html"><img src="sources/user.png"/></a>
+                  <a><img src="sources/compras.png"></a>    
+            </div>
+            <div class="flexsearch">
+              <div class="flexsearch--wrapper">
+                <form class="flexsearch--form" method="get" action="http://www.google.com/search " >
+                  <div class="flexsearch--input-wrapper">
+                    <input class="flexsearch--input" name="q" placeholder="Search">
+                  </div>
+                  <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                </form>
+              </div>
+            </div>
+             <div class="buttons">
+          
+              <a href="index.html" ><button id="but">Inicio</button></a>
+              <a href="paginaNovedades.html" ><button id="but">Novedades</button></a>
+              <a href="paginaInformativa.html" ><button id="but">Acerca de Nosotros</button></a>
+              <a href="paginaTips.html" ><button id="but">Tips de moda</button></a>
+
+            </div>
+          </nav>
+        <section>
+            <form id="Registro">
+             <h1>Crear Usuario</h1>
+             <form action="#" method="POST">
+                <label>Nombre</label>
+                <input placeholder="Ingrese su nombre " type="text" name="nombre" size="25"/>
+                <br>
+                
+                <label>Apellidos</label>
+                <input placeholder="Ingrese sus apellidos " type="text" name="apellidos" size="25"/>
+                <br>
+                
+                <label>Usuario</label>
+                <input placeholder="Ingrese su uauario " type="text" name="usuario" size="25"/>
+                <br>
+                
+                <label>Correo</label>
+                <input type="email" name="Correo" placeholder="alguien@gmail.com" size="25"/>
+                <br>
+                
+                <label>Contraseña</label>
+                <input placeholder="Ingrese su contraseña " type="password" size="25"/>
+                <br>
+                
+                <label>Confirme su contraseña</label>
+                <input placeholder="Confirme su contraseña " type="password" size="25"/>
+                <br>
+                
+                <button type="submit" title="Ingresar" name="Ingresar">Registarse</button>
+            <br>
+            </form>
+            <div class="pie-form">
+                        <input type="checkbox" name="remember me"/>
+                        <label>Remember me</label>
+                        <br>
+                        
+                        <a href="login.html">Login</a>
+        </div>
+             
+        </section>
+    </body>
+    <footer id="footer">
+            <a href="https://www.whatsapp.com/" ><img src="sources/whatsapp.png"/></a>
+            <a href="https://www.instagram.com/" ><img src="sources/instagram.png" /></a>
+            <a href="https://www.facebook.com/" ><img src="sources/facebook.png" /></a><br>
+            <p id="infofooter">© 2023 Sincronías SA Todos los derechos reservados</p>
+        </footer>
+</html>
