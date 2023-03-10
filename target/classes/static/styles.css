@@ -55,8 +55,6 @@
   color: #333;
   font-family: 'Arial', sans-serif;
   font-size: 25px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 .flexsearch--submit {
@@ -191,4 +189,10 @@ p {
   text-decoration: none;
   color: burlywood;
   margin-bottom: 3px;
+}
+
+#img_prin{
+  margin:10px auto;
+  display: block;
+  width: 1500px;
 }
