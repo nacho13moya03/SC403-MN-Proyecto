@@ -1,71 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link href="info_styles.css" rel="stylesheet" type="text/css" />
-    <title>Sincronías Official Site | Fashion Clothes</title>
-    <link rel="shortcut icon" href="sources/shortcut_icon.png" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <meta charset="UTF-8">
+        <title>Sincronías Official Site | Fashion Clothes</title>
+        <link rel="shortcut icon" href="sources/shortcut_icon.png" />
+    </head>
 
-</head>
+    <body>
+        <nav id="encabezado">
+            <h1 class="company_name">Sincronias</h1>
+            <div id="icons">
+                <a href="perfil.html" style="padding-right: 9px"><img src="sources/usuario.png" /></a>
+                <a href="carritoCompras.html" style="padding-right: 13px"><img src="sources/bolsa.png"></a>
+                <a href="paginaInformativa.html"><img src="sources/informacion.png"></a>
+            </div>
+            <div class="flexsearch">
+                <div class="flexsearch--wrapper">
+                    <form class="flexsearch--form" method="get" action="http://www.google.com/search ">
+                        <div class="flexsearch--input-wrapper">
+                            <input class="flexsearch--input" name="q" placeholder="   Filtrar por">
+                        </div>
+                        <input class="flexsearch--submit" type="submit" value="&#10140;" />
+                    </form>
+                </div>
+            </div>
 
-<body>
-    <nav id="encabezado">
-        <h1 class="company_name">Sincronias</h1>
-        <div id="icons">
-            <a><img src="sources/like.png"></a>
-            <a href="login.html"><img src="sources/user.png" /></a>
-            <a href="pay_order.html"><img src="sources/compras.png"></a>
-        </div>
-        <div class="flexsearch">
-            <div class="flexsearch--wrapper">
-                <form class="flexsearch--form" method="get" action="http://www.google.com/search ">
-                    <div class="flexsearch--input-wrapper">
-                        <input class="flexsearch--input" name="q" placeholder="Search">
-                    </div>
-                    <input class="flexsearch--submit" type="submit" value="&#10140;" />
-                </form>
+            <div class="enlaces">
+                <a href="index.html" id="enlace-individual">Inicio</a>
+                <a href="catalogos.html" id="enlace-individual" >Catálogos</a>
+                <a href="paginaInformativa.html" id="enlace-individual" >Acerca de nosotros</a>
+            </div>
+
+        </nav>
+        <div class="contenedor-login">
+            <img id="img-login" src="sources/fondo.jpg" width="1500" />
+            <div class="texto-sobre-imagen" style="text-align: center">
+                <label>Correo electrónico: </label><br>
+                <input type="email" name="Correo" size="25" />
+                <br>
+                <br>
+                <label>Contraseña: </label><br>
+                <input type="password" size="25" />
+                <br> <br> <br>
+                <a href="index.html" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">Iniciar Sesión</button></a>
+                 <br> <br> <br>
+                <label>Registrarse </label><br><br>
+                 <a href="registro.html" style="text-decoration: none"><button class="botones-individual-login">Crear Cuenta</button></a>
             </div>
         </div>
 
-        <div class="buttons">
-
-            <a href="index.html"><button id="but">Inicio</button></a>
-            <a href="paginaNovedades.html"><button id="but">Novedades</button></a>
-            <a href="paginaInformativa.html"><button id="but">Acerca de Nosotros</button></a>
-            <a href="paginaTips.html"><button id="but">Tips de moda</button></a>
-
-
-        </div>
-    </nav>
-    <br><br><br>
-    <form id="loginform">
-        <h1>Login</h1>
-        <form action="#" method="POST">
-            <label>Usuario: </label>
-            <input type="text" name="usuario" placeholder="Usuario" required>
-            <br>
-            <br>
-            <label>Contraseña: </label>
-            <input type="password" placeholder="Contraseña" name="password" required>
-            <br>
-            <br>
-            <button type="submit" title="Ingresar" name="Ingresar">Login</button>
-            <br>
-        </form>
-        <div class="pie-form">
-            <a href="#">¿Perdiste tu contraseña?</a>
-            <a href="paginaUsuario.html">¿No tienes Cuenta? Registrate</a>
-        </div>
-        <br><br><br><br><br><br><br><br><br>
-        <footer id="footer">
-            <a href="https://www.whatsapp.com/"><img src="sources/whatsapp.png" /></a>
-            <a href="https://www.instagram.com/"><img src="sources/instagram.png" /></a>
-            <a href="https://www.facebook.com/"><img src="sources/facebook.png" /></a><br>
+        <footer id="footer" style="margin-top: -1em">
+            <a href="https://www.whatsapp.com/" style="padding-right: 5px"><img src="sources/whatsapp.png" /></a>
+            <a href="https://www.instagram.com/" style="padding-right: 5px"><img src="sources/instagram.png" /></a>
+            <a href="https://www.facebook.com/"><img src="sources/facebook.png" /></a>
             <p id="infofooter">© 2023 Sincronías SA Todos los derechos reservados</p>
         </footer>
-</body>
+    </body>
 
 </html>

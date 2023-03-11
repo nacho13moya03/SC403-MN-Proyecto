@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head>
         <link href="styles.css" rel="stylesheet" type="text/css" />
-        <meta charset="UTF-8">
+        <link href="info_styles.css" rel="stylesheet" type="text/css" />
         <title>Sincronías Official Site | Fashion Clothes</title>
         <link rel="shortcut icon" href="sources/shortcut_icon.png" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -32,26 +34,25 @@
                 <a href="catalogos.html" id="enlace-individual" >Catálogos</a>
                 <a href="paginaInformativa.html" id="enlace-individual" >Acerca de nosotros</a>
             </div>
-
         </nav>
-        <div class="contenedor-login">
-            <img id="img-login" src="sources/fondo.jpg" width="1500" />
-            <div class="texto-sobre-imagen" style="text-align: center">
-                <label>Correo electrónico: </label><br>
-                <input type="email" name="Correo" size="25" />
-                <br>
-                <br>
-                <label>Contraseña: </label><br>
-                <input type="password" size="25" />
-                <br> <br> <br>
-                <a href="index.html" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">Iniciar Sesión</button></a>
-                 <br> <br> <br>
-                <label>Registrarse </label><br><br>
-                 <a href="registro.html" style="text-decoration: none"><button class="botones-individual-login">Crear Cuenta</button></a>
+        <section style="background-color:#f5f0eb">
+            <br>
+            <h1 id="titulos">Perfil</h1><br>
+            <div style="text-align: center; padding-bottom: 80px" >
+                <img class="circular--square" src="sources/foto.jpg" />
+                <h2 style="text-align: center;color: black; font-size: 18px; font-weight: bolder">Nombre del Usuario</h2>
+                <!-- <h2 style="text-align: center;color: black; font-size: 18px; font-weight: lighter">Correo Electrónico:</h2> --> 
+                <div class="datos-perfil">
+                    <label style="margin-right: 100px">Correo Electrónico: _______________________</label>
+                    <label >Número Telefónico: _______________________</label>
+                </div>
+                <div style="text-align: center">
+                    <button class="botones-individual" style="margin-right: 230px">Actualizar Perfil</button>
+                    <button class="botones-individual">Borrar Perfil</button>
+                </div>
             </div>
-        </div>
-
-        <footer id="footer" style="margin-top: -1em">
+        </section>
+        <footer id="footer">
             <a href="https://www.whatsapp.com/" style="padding-right: 5px"><img src="sources/whatsapp.png" /></a>
             <a href="https://www.instagram.com/" style="padding-right: 5px"><img src="sources/instagram.png" /></a>
             <a href="https://www.facebook.com/"><img src="sources/facebook.png" /></a>
