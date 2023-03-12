@@ -123,7 +123,7 @@ input:-moz-placeholder {
   margin: 15px 10px 10px 10px;
 }
 
-/*.buttons {
+.buttons {
   margin-top: 20px;
   text-align: center;
 }
@@ -137,10 +137,10 @@ input:-moz-placeholder {
   border: 0;
   outline: none;
   background: none;
-}*/
+}
 
 .enlaces{
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -158,14 +158,10 @@ input:-moz-placeholder {
 #footer {
   background-color: #EBDED3;
   text-align: center;
- /* letter-spacing: 5px;*/
-  padding-left: 35px;
   padding-top: 13px;
   padding-bottom:1px;
-  margin-top: -9px;
-  /*margin-top: 5px;
-  margin-left: -0.1in;
-  margin-right: -0.08in;*/
+  margin: 10px auto;
+  display: block;
 }
 
 #infofooter{
@@ -186,12 +182,13 @@ input:-moz-placeholder {
 #seccionInformativa{
     background-color: white;
     padding-top: 10px;
-    margin-left: 250px;
+    display: block;
+    margin: 10px auto;
     width: 1000px
 }
 
 .textoInformativo {
-  text-align: justify-all;
+  text-align: center;
   margin-left: 50px;
   margin-right: 50px;
 }
