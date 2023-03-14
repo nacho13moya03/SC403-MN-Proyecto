@@ -18,7 +18,7 @@ public class Descuento implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_descuento")
-    private Long idCredito;
+    private Long id_descuento;
     private double descuento;
 
     public Descuento() {

@@ -1,0 +1,82 @@
+drop schema sincronias ;
+drop user usuario_admin;
+
+
+CREATE SCHEMA sincronias ;
+
+create user 'usuario_admin'@'%' identified by 'admin_Clave.';
+grant all privileges on techshop.* to 'usuario_admin'@'%';
+flush privileges;
+
+create table sincronias.descuento (
+  id_descuento INT NOT NULL AUTO_INCREMENT,
+  descuento int,
+  PRIMARY KEY (id_descuento)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+CREATE TABLE sincronias.cliente (
+  id_cliente INT NOT NULL AUTO_INCREMENT,
+  id_descuento INT NOT NULL,
+  nombre VARCHAR(20) NOT NULL,
+  apellidos VARCHAR(30) NOT NULL,
+  correo VARCHAR(25) NULL,
+  telefono VARCHAR(15) NULL,
+  PRIMARY KEY (`id_cliente`),
+  foreign key fk_cliente_descuento (id_descuento) references descuento(id_descuento)  )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table sincronias.catalogo (
+  id_catalogo INT NOT NULL AUTO_INCREMENT,
+  N_catalogo VARCHAR(30) NOT NULL,  
+  activo bool,
+  PRIMARY KEY (id_catalogo))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table sincronias.producto (
+  id_producto INT NOT NULL AUTO_INCREMENT,
+  id_catalogo INT NOT NULL,
+  N_producto VARCHAR(50) NOT NULL,  
+  descripcion VARCHAR(1600) NOT NULL, 
+  precio double,
+  existencias int,
+  activo bool,
+  PRIMARY KEY (id_producto),
+  foreign key fk_producto_catalogo (id_catalogo) references catalogo(id_catalogo)  
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+
+
+INSERT INTO sincronias.descuento (id_descuento,descuento) values
+(1,3),
+(2,2),
+(3,1);
+
+INSERT INTO sincronias.cliente (id_cliente, id_descuento, nombre, apellidos, correo, telefono) VALUES 
+(1, 1,'Fernando', 'Gomez Moya',    'fgomez@gmail.com',    '8975-9846'),
+(2, 2,'Victoria',  'Hidalgo Alfaro', 'vhidalgo@gmail.com', '8548-1278'),
+(3, 3,'Lucia', 'Ramirez Loria',     'lramirez@gmail.com',      '7438-5278');
+
+/*Se insertan 3 categorias de productos como ejemplo */
+INSERT INTO sincronias.catalogo (id_catalogo,N_catalogo,activo) VALUES 
+('1','Mujer',    true), 
+('2','Hombre',     true),
+('3','Nino',true),
+('4','Bebe',    true);
+
+INSERT INTO sincronias.producto (id_producto,id_catalogo,N_producto,descripcion,precio,existencias,activo) VALUES
+(1,1,'Vestido','Vestido de tirentes con abertura en la pierna',10000,24,true),
+(2,1,'Blusa','Blusa cin mangas y elastico en los hombros',4700,10,true),
+(4,1,'Enagua','Enagua corta con fruncido a los lados',5600,20,true),
+(5,1,'top','Top juvenil',4000,5,true),
+(6,1,'Conjuntos','Enagua y blusa floreada',7800,15,true),
+(7,2,'Camisa','Camisa de Hombre con detalles en la maga y bolsa',45000,5,true)
