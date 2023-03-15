@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.SC403.Proyecto.ProejctApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.084 s - in com.SC403.Proyecto.ProejctApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.702 s - in com.SC403.Proyecto.ProejctApplicationTests
