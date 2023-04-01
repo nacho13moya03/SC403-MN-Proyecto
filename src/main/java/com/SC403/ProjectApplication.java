@@ -1,4 +1,4 @@
-package com.SC403.Proyecto;
+package com.SC403;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
