@@ -65,6 +65,7 @@ docente Julian Venegas Diaz los días miércoles en horario de 6pm a 9pm.</descr
 			<artifactId>jakarta.persistence-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
