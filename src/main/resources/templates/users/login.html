@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{layout/plantilla :: head}">
+<head th:replace="~{../layout/plantilla :: head}">
   <meta charset="UTF-8">
-  <title>Sincronías Official Site | Fashion Clothes</title>
+  <title>Sincronías Official Site | Login</title>
 </head>
 
 <body>
 
-<header th:replace="~{layout/plantilla :: header}"/>
+<header th:replace="~{../layout/plantilla :: header}"/>
 
 
-<form action="../../../java/com/web/Controller/Login.java" method="POST">
+<form action="Controller/Login.java" method="POST">
   <label for="nombre_usuario">Nombre de usuario:</label>
   <input type="text" id="nombre_usuario" name="nombre_usuario"><br><br>
   <label for="contrasena">Contraseña:</label>
@@ -21,7 +21,7 @@
 </form>
 
 
-<footer th:replace="~{layout/plantilla :: footer}"/>
+<footer th:replace="~{../layout/plantilla :: footer}"/>
 </body>
 
 </html>

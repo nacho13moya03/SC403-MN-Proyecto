@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{../layout/plantilla :: head}">
+  <meta charset="UTF-8">
+  <title>Sincronías Official Site | Login</title>
+</head>
+
+<body>
+
+<header th:replace="~{../layout/plantilla :: header}"/>
+
+
+<form action="Controller/Login.java" method="POST">
+  <label for="nombre_usuario">Nombre de usuario:</label>
+  <input type="text" id="nombre_usuario" name="nombre_usuario"><br><br>
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena" name="contrasena"><br><br>
+  <input type="submit" value="Iniciar sesión">
+</form>
+
+
+<footer th:replace="~{../layout/plantilla :: footer}"/>
+</body>
+
+</html>

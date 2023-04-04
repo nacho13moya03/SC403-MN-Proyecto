@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{layout/plantilla :: head}">
+<head th:replace="~{../layout/plantilla :: head}">
   <meta charset="UTF-8">
-  <title>Sincronías Official Site | Fashion Clothes</title>
+  <title>Sincronías Official Site | Register</title>
 </head>
 
 <body>
 
-<header th:replace="~{layout/plantilla :: header}"/>
+  <header th:replace="~{../layout/plantilla :: header}"/>
 
-<section>
+
   <form id="Registro">
     <h1>Crear Usuario</h1>
     <form action="#" method="POST">
@@ -45,13 +45,11 @@
     <div class="pie-form">
       <input type="checkbox" name="remember me" />
       <label>Remember me</label>
-      <br>
-
-      <a href="login.html">Login</a>
+      <br>      <a href="login.html">Login</a>
     </div>
-</section>
+  </form>
 
-<footer th:replace="~{layout/plantilla :: footer}"/>
+    <footer th:replace="~{../layout/plantilla :: footer}"/>
 </body>
 
 </html>
