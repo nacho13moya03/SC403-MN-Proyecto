@@ -9,48 +9,44 @@
 
 <body>
 
-<header th:replace="~{../layout/plantilla :: header}"/>
+  <header th:replace="~{../layout/plantilla :: header}"/>
 
 
-<form id="Registro">
-  <h1>Crear Usuario</h1>
-  <form action="#" method="POST">
-    <label>Nombre: </label>
-    <input placeholder="Ingrese su nombre " type="text" name="nombre" size="25" />
-    <br>
-    <br>
-    <label>Apellidos: </label>
-    <input placeholder="Ingrese sus apellidos " type="text" name="apellidos" size="25" />
-    <br>
-    <br>
-    <label>Usuario: </label>
-    <input placeholder="Ingrese su usuario " type="text" name="usuario" size="25" />
-    <br>
-    <br>
-    <label>Correo: </label>
-    <input type="email" name="Correo" placeholder="alguien@gmail.com" size="25" />
-    <br>
-    <br>
-    <label>Contraseña: </label>
-    <input placeholder="Ingrese su contraseña " type="password" size="25" />
-    <br>
-    <br>
-    <label>Confirme su contraseña: </label>
-    <input placeholder="Confirme su contraseña " type="password" size="25" />
-    <br>
-    <br>
-    <button type="submit" title="Ingresar" name="Ingresar">Registarse</button>
-    <br>
-  </form>
-  <div class="pie-form">
-    <input type="checkbox" name="remember me" />
-    <label>Remember me</label>
-    <br>
+  <div class="contenedor-login" style="text-align: center">
+    <img id="img-login" src="sources/fondo.jpg" width="1500" />
+    <label style="font-size: 20px" id="titulo-sobre-imagen">Registro</label><br><br>
+    <div id="datos-registro-derecha">
+      <label>Nombre: </label><br>
+      <input type="text" name="Correo" size="25" />
+      <br>
+      <br>
+      <br>
+      <label>Correo electrónico: </label><br>
+      <input type="email" name="Correo" size="25" />
+      <br>
+      <br>
+      <br>
+      <label>Contraseña: </label><br>
+      <input type="password" size="25" />
+    </div>
+    <div id="datos-registro-izquierda">
+      <label>Apellidos: </label><br>
+      <input type="text" name="Correo" size="25" />
+      <br>
+      <br>
+      <br>
+      <label>Teléfono: </label><br>
+      <input type="email" name="Correo" size="25" />
+    </div>
+    <br> <br> <br>
+    <div id="boton-sobre-imagen-registro">
+      <a href="registroCompleto.html" style="text-decoration: none"><button class="botones-individual-registro" style="background-color: green;margin-right: 25px">Registrar</button></a>
+      <a href="login.html" style="text-decoration: none"><button class="botones-individual-registro" style="background-color: red">Cancelar</button></a>
 
-    <a href="login.html">Login</a>
+    </div>
   </div>
 
-  <footer th:replace="~{../layout/plantilla :: footer}"/>
+    <footer th:replace="~{../layout/plantilla :: footer}"/>
 </body>
 
 </html>
