@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{../layout/plantilla :: head}">
+<head th:replace="~{../layout/plantilla :: head-2}">
     <meta charset="UTF-8">
-    <title>Sincronías Official Site | Register</title>
+    <title>Sincronías Official Site | Register </title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <div class="texto-sobre-imagen" style="text-align: center">
         <label style="font-size: 30px">Registro Completo</label><br>
         <br> <br> <br>
-        <a href="login.html" style="text-decoration: none"><button
+        <a th:href="@{/index}" style="text-decoration: none"><button
                 class="botones-individual-login"
                 style="background-color: green">Iniciar Sesión</button></a>
     </div>

@@ -5,16 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
-@RequestMapping("/catalogue")
-public class CatalogueController {
+@RequestMapping("/extras")
+public class InfoController {
 
-    //@Autowired
-    //ClienteService clienteService;
-
-        @GetMapping("/catalogs")
-        public String inicio(Model model) {
+    @GetMapping("/info")
+    public String inicio(Model model) {
 
 
-            return "/catalogue/catalogs";
-        }
+        return "/extras/info";
     }
+}

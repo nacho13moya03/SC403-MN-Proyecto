@@ -20,12 +20,12 @@
   <nav>
     <h1 class="company_name">Sincronias</h1>
     <div id="icons">
-      <a href="../users/login.html" style="padding-right: 9px"><img
+      <a th:href="@{/users/login}" style="padding-right: 9px"><img
               src="../../static/media/usuario.png"
       /></a>
-      <a href="carritoCompras.html" style="padding-right: 13px"><img
+      <a th:href="@{/extras/ShoppingCart}" style="padding-right: 13px"><img
               src="../../static/media/bolsa.png"></a>
-      <a href="../extras/info.html"><img
+      <a th:href="@{/extras/info}"><img
               src="../../static/media/informacion.png"></a>
     </div>
     <div class="flexsearch">
@@ -43,9 +43,9 @@
     </div>
 
     <div class="enlaces" >
-        <a href="../index.html" id="enlace-individual">Inicio</a>
+        <a th:href="@{/index}" id="enlace-individual">Inicio</a>
         <a th:href="@{/catalogue/catalogs}" id="enlace-individual">Catálogos</a>
-        <a href="../extras/info" id="enlace-individual">Acerca de nosotros</a>
+        <a th:href="@{/extras/info}" id="enlace-individual">Acerca de nosotros</a>
      </div>
    </nav>
  </header>
