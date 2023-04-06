@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{../layout/plantilla :: head-2}">
+    <meta charset="UTF-8">
+    <title>Sincronías Official Site | Catalogs </title>
+</head>
+
+<body>
+
+<header th:replace="~{../layout/plantilla :: header}"/>
+
+<div>
+<section style="background-color:#f5f0eb">
+    <div class="enlaces-catalogo">
+        <a th:href="@{/catalogue/mujeres}" id="enlace-individual-catalogo">ROPA DE MUJER</a>
+        <a th:href="@{/catalogue/hombres}" id="enlace-individual-catalogo" >ROPA DE HOMBRE</a>
+        <a th:href="@{/catalogue/niños}" id="enlace-individual-catalogo" >ROPA DE NIÑOS</a>
+        <a th:href="@{/catalogue/bebes}" id="enlace-individual-catalogo" >ROPA DE BEBÉ</a>
+    </div>
+</section>
+</div>
+
+
+
+<footer th:replace="~{../layout/plantilla :: footer}"/>
+</body>
+
+</html>
