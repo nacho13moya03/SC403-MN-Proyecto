@@ -22,7 +22,7 @@ public SpringResourceTemplateResolver TemplatesResolver_0(){
  @Bean
  public ClassLoaderTemplateResolver TemplatesResolver_1(){
  ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
- templateResolver.setPrefix("templates/catalogues/");
+ templateResolver.setPrefix("templates/catalogue/");
  templateResolver.setSuffix(".html");
  templateResolver.setTemplateMode(TemplateMode.HTML);
  templateResolver.setCharacterEncoding("UTF-8");
