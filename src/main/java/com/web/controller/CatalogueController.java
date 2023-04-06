@@ -35,7 +35,7 @@ public class CatalogueController {
     @PostMapping("/guardar")
     public String guardaArticulo(Catalogue articulo) {
         catalogueService.saveArticulo(articulo);
-        return "redirect:/articulo/listado";
+        return "redirect:/catalogue/catalogs";
     }
 
     @GetMapping("/modificar/{idArticulo}")
