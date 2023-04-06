@@ -2,65 +2,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
-  <link rel="stylesheet" type="text/css" th:href="@{CSS/styles.css}"/>
-  <meta charset="UTF-8">
-  <title>Sincronías Official Site | Fashion Clothes</title>
-  <link rel="shortcut icon" href="../../static/media/shortcut_icon.png" />
+    <link rel="stylesheet" type="text/css" th:href="@{CSS/styles.css}"/>
+    <meta charset="UTF-8">
+    <title>Sincronías Official Site | Fashion Clothes</title>
+    <link rel="shortcut icon" href="../../static/media/shortcut_icon.png"/>
+
 </head>
 
 <head th:fragment="head-2">
     <link href="../../static/CSS/styles.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <title>Sincronías Official Site | Fashion Clothes</title>
-    <link rel="shortcut icon" href="../../static/media/shortcut_icon.png" />
+    <link rel="shortcut icon" href="../../static/media/shortcut_icon.png"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 
 <body>
 <header th:fragment="header" id="encabezado">
-  <nav>
-    <h1 class="company_name">Sincronias</h1>
-    <div id="icons">
-      <a th:href="@{/users/login}" style="padding-right: 9px"><img
-              src="../../static/media/usuario.png"
-      /></a>
-      <a th:href="@{/extras/ShoppingCart}" style="padding-right: 13px"><img
-              src="../../static/media/bolsa.png"></a>
-      <a th:href="@{/extras/info}"><img
-              src="../../static/media/informacion.png"></a>
-    </div>
-    <div class="flexsearch">
-      <div class="flexsearch--wrapper">
-        <form class="flexsearch--form" method="get"
-              action="http://www.google.com/search ">
-          <div class="flexsearch--input-wrapper">
-            <input class="flexsearch--input" name="q"
-                   placeholder=" Buscar">
-          </div>
-          <input class="flexsearch--submit" type="submit"
-                 value="&#10140;" />
-        </form>
-      </div>
-    </div>
+    <nav>
+        <h1 class="company_name">Sincronias</h1>
+        <div id="icons">
+            <a th:href="@{/users/login}" style="padding-right: 9px"><img
+                    src="../../static/media/usuario.png"
+            /></a>
+            <a th:href="@{/extras/ShoppingCart}" style="padding-right: 13px"><img
+                    src="../../static/media/bolsa.png"></a>
+            <a th:href="@{/extras/info}"><img
+                    src="../../static/media/informacion.png"></a>
+        </div>
+        <div class="flexsearch">
+            <div class="flexsearch--wrapper">
+                <form class="flexsearch--form" method="get"
+                      action="http://www.google.com/search ">
+                    <div class="flexsearch--input-wrapper">
+                        <input class="flexsearch--input" name="q"
+                               placeholder=" Buscar">
+                    </div>
+                    <input class="flexsearch--submit" type="submit"
+                           value="&#10140;"/>
+                </form>
+            </div>
+        </div>
 
-    <div class="enlaces" >
-        <a th:href="@{/index}" id="enlace-individual">Inicio</a>
-        <a th:href="@{/catalogue/catalogs}" id="enlace-individual">Catálogos</a>
-        <a th:href="@{/extras/info}" id="enlace-individual">Acerca de nosotros</a>
-     </div>
-   </nav>
- </header>
+        <div class="enlaces">
+            <a th:href="@{/index}" id="enlace-individual">Inicio</a>
+            <a th:href="@{/catalogue/catalogs}" id="enlace-individual">Catálogos</a>
+            <a th:href="@{/extras/info}" id="enlace-individual">Acerca de nosotros</a>
+        </div>
+    </nav>
+</header>
 
- <footer th:fragment="footer" id="footer">
-   <a href="https://www.whatsapp.com/" style="padding-right: 5px"><img
-           src="../../static/media/whatsapp.png" /></a>
-   <a href="https://www.instagram.com/" style="padding-right: 5px"><img
-           src="../../static/media/instagram.png" /></a>
-   <a href="https://www.facebook.com/"><img
-           src="../../static/media/facebook.png"
-   /></a>
-   <p id="infofooter">© 2023 Sincronías SA Todos los derechos
-     reservados</p>
- </footer>
+<footer th:fragment="footer" id="footer">
+    <a href="https://www.whatsapp.com/" style="padding-right: 5px"><img
+            src="../../static/media/whatsapp.png"/></a>
+    <a href="https://www.instagram.com/" style="padding-right: 5px"><img
+            src="../../static/media/instagram.png"/></a>
+    <a href="https://www.facebook.com/"><img
+            src="../../static/media/facebook.png"
+    /></a>
+    <p id="infofooter">© 2023 Sincronías SA Todos los derechos
+        reservados</p>
+</footer>
 
- </body>
- </html>
+</body>
+</html>
