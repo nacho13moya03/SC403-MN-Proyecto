@@ -55,4 +55,16 @@ templateResolver.setCharacterEncoding("UTF-8");
  return templateResolver;
 }
 
+ @Bean
+ public ClassLoaderTemplateResolver TemplatesResolver_4(){
+  ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
+  templateResolver.setPrefix("templates/base_datos/");
+  templateResolver.setSuffix(".html");
+  templateResolver.setTemplateMode(TemplateMode.HTML);
+  templateResolver.setCharacterEncoding("UTF-8");
+  templateResolver.setOrder(4);
+  templateResolver.setCheckExistence(true);
+  return templateResolver;
+ }
+
 }
