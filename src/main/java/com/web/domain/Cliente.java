@@ -11,23 +11,23 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "usuario")
-public class Usuario implements Serializable  {
+@Table(name = "cliente")
+public class Cliente implements Serializable  {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario")
-    private Long idUsuario;
+    @Column(name = "id_cliente")
+    private Long idCliente;
     private String nombre;
     private String apellidos;
     private String correo;
     private String password;
     private String telefono;
 
-    public Usuario() {  }
+    public Cliente() {  }
 
-    public Usuario(String nombre, String apellidos, String correo, String password, String telefono) {
+    public Cliente(String nombre, String apellidos, String correo, String password, String telefono) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;

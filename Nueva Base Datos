@@ -1,0 +1,215 @@
+/*Se crea la base de datos */
+CREATE SCHEMA sincronias ;
+/*Se crea un usuario para la base de datos llamado "usuario_prueba" y tiene la contraseña "Usuario_Clave."*/
+create user 'Boss'@'%' identified by 'Clave';
+/*Se asignan los prvilegios sobr ela base de datos TechShop al usuario creado */
+grant all privileges on sincronias.* to 'Boss'@'%';
+flush privileges;
+
+/*Se crea la tabla de clientes llamada cliente... igual que la clase Cliente */
+CREATE TABLE sincronias.cliente (
+  id_cliente INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(20) NOT NULL,
+  apellidos VARCHAR(35) NOT NULL,
+  correo VARCHAR(25) NOT NULL,
+  password VARCHAR(20) NOT NULL,
+  telefono VARCHAR(15) NOT NULL,
+  PRIMARY KEY (id_cliente))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table sincronias.categoria (
+  id_categoria INT NOT NULL AUTO_INCREMENT,
+  descripcion VARCHAR(30) NOT NULL,
+  PRIMARY KEY (id_categoria))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table sincronias.articulo (
+  id_articulo INT NOT NULL AUTO_INCREMENT,
+  id_categoria INT NULL,
+  tipo VARCHAR(20) NOT NULL,
+  imagen longblob NOT NULL,
+  descripcion VARCHAR(100) NOT NULL,
+  detalle VARCHAR(1600) NOT NULL,
+  precio double,
+  existencias int,
+  PRIMARY KEY (id_articulo),
+  foreign key fk_articulo_categoria (id_categoria) references categoria(id_categoria)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+/*Se crea la tabla de Carrito de Compras*/
+CREATE TABLE sincronias.compra (
+  id_compra INT NOT NULL AUTO_INCREMENT,
+  id_cliente INT NOT NULL,
+  id_articulo INT NOT NULL,
+  talla VARCHAR(3) NOT NULL,
+  cantidad INT NOT NULL,
+  total double NOT NULL,
+  PRIMARY KEY (`id_compra`),
+  foreign key fk_compra_cliente (id_cliente) references cliente(id_cliente),
+  foreign key fk_compra_articulo (id_articulo) references articulo(id_articulo)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+/*Se crea la tabla de Metodo de Pago*/
+CREATE TABLE sincronias.metodoPago (
+  numero_tarjeta VARCHAR(18) NOT NULL,
+  id_cliente INT NOT NULL,
+  nombre VARCHAR(50) NOT NULL,
+  vencimiento DATE NOT NULL,
+  codigo_seguridad INT NOT NULL,
+  PRIMARY KEY (`numero_tarjeta`),
+  foreign key fk_metodoPago_cliente (id_cliente) references cliente(id_cliente)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+/*create table sincronias.factura (
+  id_factura INT NOT NULL AUTO_INCREMENT,
+  id_cliente INT NOT NULL,
+  fecha date,
+  total double,
+  estado int,
+  PRIMARY KEY (id_factura),
+  foreign key fk_factura_cliente (id_cliente) references cliente(id_cliente)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table sincronias.venta (
+  id_venta INT NOT NULL AUTO_INCREMENT,
+  id_factura INT NOT NULL,
+  id_articulo INT NOT NULL,
+  precio double,
+  cantidad int,
+  PRIMARY KEY (id_venta),
+  foreign key fk_ventas_factura (id_factura) references factura(id_factura),
+  foreign key fk_ventas_articulo (id_articulo) references articulo(id_articulo)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+INSERT INTO sincronias.credito (id_credito,limite) values
+(1,500000),
+(2,1000000),
+(3,1500000);
+*/
+/*Se insertan 3 registros en la tabla cliente como ejemplo */
+INSERT INTO sincronias.cliente (id_cliente, nombre, apellidos, correo, telefono) VALUES
+(1,'Angelica', 'Valerin Viquez',    'avalerin90056@ufide.ac.cr',    '8530-0459'),
+(2,'Adriana',  'Ramirez Sanchez', 'aramirez40828@ufide.ac.cr', '7283-3483'),
+(3,'Ignacio', 'Moya Azofeifa',     'imoya80879@ufide.ac.cr',      '8819-6280');
+
+/*Se insertan 3 categorias de productos como ejemplo */
+INSERT INTO sincronias.categoria (id_categoria,descripcion) VALUES
+('1','Bebes'),
+('2','Niños'),
+('3','Mujeres'),
+('4','Hombres');
+
+/*Se insertan 4 productos por categoria */
+INSERT INTO sincronias.articulo (id_articulo,id_categoria,tipo,imagen,descripcion,detalle,precio,existencias) VALUES
+(1,1,'Camisas','Imagen','Star Wars ™ The Mandalorian Graphic Romper','Tejido de punto suave.
+Mangas raglán cortas.
+Ataques en el cuello redondo.
+El gráfico mandaloriano en el frente.
+Instantáneas ocultas en la entrepierna para vestirse y pañales fácilmente.
+Gobierna la galaxia.',
+18000,5),
+(2,1,'Camisas','Imagen','Baby Johnny Collar Polo Romper','Tejido de punto suave.
+Mangas cortas.
+Cuello extendido.
+Brannan Bear bordado en el pecho.
+Instantáneas ocultas en la entrepierna para vestirse y pañales fácilmente.
+Los estilos seleccionados tienen rayas en todas partes o bloqueos de color.
+Elementos esenciales para bebés supersoft y acogedor con nuestro exclusivo oso Brannan.',
+20000,2),
+(3,1,'Jacket','Imagen','Sherpa Icon Twill Jacket','Denim elástico.
+Acogedor forro de sherpa en el cuerpo.
+Lavado marrón.
+Mangas largas con puños abotonados.
+Cuello extendido, frente de botón.
+Bolsillos de parche de botón en el pecho.
+Dobladillo anillado.',
+24000,5),
+(4,1,'Chaleco','Imagen','ColdControl Puffer Vest','Exterior acolchado resistente al agua.
+100% de relleno de pozo reciclado.
+Sin mangas.
+Cuello de pie, cremallera frontal.',
+22600,2),
+(5,2,'Camisa','Imagen','Camiseta gráfica Sony Playstation','Tejido de punto suave.
+Hombro caído, manga corta.
+Tripulación.
+Gráfico de Sony Playstation en la parte delantera.',
+25000,5),
+(6,2,'Camisa','Imagen','Camiseta gráfica para niños','Tejido de punto suave.
+Mangas cortas.
+Tripulación.
+Logotipos y gráficos surtidos en la parte delantera.',
+17000,2),
+(7,2,'Short','Imagen','Shorts de extracción de logo de Kids','Terry francés suave.
+Corbatas de cordón en cinturilla elástica.
+Bolsillos en la costura.
+Logotipo de la brecha en el dobladillo.',
+25000,5),
+(8,2,'Conjunto','Imagen','Star Wars ™ Conjunto de PJ 100% reciclado','Hecho con poliéster 100% reciclado.
+Hombro caído, manga corta.
+Tripulación.
+Gráfico de Star Wars al frente.
+Cintura elástica.
+Gobierna la galaxia.',
+27600,2),
+(9,3,'Blusa','Imagen','BLUSA SPORT LISA COLOR VERDE CLARO','Esta camisa sport cuenta con un diseño sobrio  y un detalle en cuello y botones que le da un aspecto  moderno y llamativo. Esta camisa está elaborada con 95% Algodón y 5% Spandex, el mayor beneficio de esta mezcla es la elasticidad y flexibilidad que tiene la fibra para recuperar su aspecto original.
+Sus coloridos diseños hacen que puedas combinarlas con tus jeans favoritos.',
+17000,5),
+(10,3,'Blusa','Imagen','BLUSA SPORT FLORAL ROSA PASTEL','Dale a tu look un toque femenino con esta blusa sport de estampados florales elaborada con tela exclusiva. Es 100% algodón.
+
+Esta blusa es perfecta  para un día relajado de fin de semana o una reunión informal con amigas',
+17000,2),
+(11,3,'Pantalon','Imagen','PANTALON CASUAL SLIM FIT COLOR BEIGE','Pantalón  casual slim fit stretch color beige con 2 bolsillos delanteros, tiro medio.
+
+Slim Fit.
+98% algodón.
+2% elastano ',
+25400,5),
+(12,3,'Jeans','Imagen','JEANS DE DAMA 451 COLOR AZUL SKINNY FIT','¿Cómo quieres lucir estos skinny jeans? este estilo es tan versátil que puedes combinarlo con lo que quieras, tacones, botas, sneakers, blusas, camisetas. ¡Tú decides!
+Además:
+• Tiro alto
+• Levanta pompa
+• Con bolsas delanteras y traseras',
+20000,3),
+(13,4,'Camisa','Imagen','CAMISA CASUAL PERFORMANCE MANGA CORTA COLOR AMARILLA ','Las camisas performance cuentan con tecnología de absorción de humedad y protección solar SPF50, ideal para disfrutar al aire libre. Cuentan con un sistema de ventilación interna que ofrece comodidad y frescura. Su tela súper ligera y de alta calidad respira activamente y aleja la humedad de la piel.
+Además:
+• Es de secado rápido
+• Es de planchado fácil
+• Resistente a las arrugas',
+285000,0),
+(14,4,'Camisa','Imagen','CAMISA CASUAL PERFORMANCE MANGA CORTA COLOR VERDE','Las camisas performance cuentan con tecnología de absorción de humedad y protección solar SPF50, ideal para disfrutar al aire libre. Cuentan con un sistema de ventilación interna que ofrece comodidad y frescura. Su tela súper ligera y de alta calidad respira activamente y aleja la humedad de la piel.
+Además:
+• Es de secado rápido
+• Es de planchado fácil
+• Resistente a las arrugas',
+285000,0),
+(15,4,'Camisa','Imagen','CAMISA CASUAL PERFORMANCE MANGA CORTA COLOR ROSADO','Las camisas performance cuentan con tecnología de absorción de humedad y protección solar SPF50, ideal para disfrutar al aire libre. Cuentan con un sistema de ventilación interna que ofrece comodidad y frescura. Su tela súper ligera y de alta calidad respira activamente y aleja la humedad de la piel.
+Además:
+• Es de secado rápido
+• Es de planchado fácil
+• Resistente a las arrugas',
+285000,0),
+(16,4,'Camisa','Imagen','CAMISA CASUAL PERFORMANCE MANGA CORTA COLOR AZUL','Las camisas performance cuentan con tecnología de absorción de humedad y protección solar SPF50, ideal para disfrutar al aire libre. Cuentan con un sistema de ventilación interna que ofrece comodidad y frescura. Su tela súper ligera y de alta calidad respira activamente y aleja la humedad de la piel.
+Además:
+• Es de secado rápido
+• Es de planchado fácil
+• Resistente a las arrugas',
+285000,0);
