@@ -22,7 +22,6 @@ public class Categoria implements Serializable {
     @Column(name = "id_categoria")
     private Long idCategoria;
     private String descripcion;
-    private boolean activo;
 
     @JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria")
     @OneToMany
@@ -33,6 +32,5 @@ public class Categoria implements Serializable {
 
     public Categoria(String descripcion, boolean activo) {
         this.descripcion = descripcion;
-        this.activo = activo;
     }
 }

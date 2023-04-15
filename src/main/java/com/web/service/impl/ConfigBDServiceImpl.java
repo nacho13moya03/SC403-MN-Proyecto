@@ -14,13 +14,8 @@ public class ConfigBDServiceImpl implements ConfigBDService {
     private ConfigBDDao configBDDao;
     @Override
     @Transactional(readOnly=true)
-    public List<ConfigBD> getArticulos(boolean activos) {
-        var lista = (List<ConfigBD>) configBDDao.findAll();
-        if (activos) {
-            lista.removeIf(e -> !e.isActivo());
-        }
-        return lista;
-
+    public List<ConfigBD> getArticulos() {
+        return configBDDao.findAll();
     }
     @Override
     @Transactional(readOnly=true)

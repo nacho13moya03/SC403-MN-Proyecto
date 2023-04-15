@@ -13,18 +13,18 @@
 
 <section style="background-color:#f5f0eb">
   <br>
-  <h1 id="titulos">Perfil</h1><br>
+  <h1 id="titulos">[[#{cliente.perfil}]]</h1><br>
   <div style="text-align: center; padding-bottom: 80px" >
     <img class="circular--square" src="../../static/media/foto.jpg" />
     <h2 style="text-align: center;color: black; font-size: 18px; font-weight: bolder">ADMIN</h2>
     <!-- <h2 style="text-align: center;color: black; font-size: 18px; font-weight: lighter">Correo Electrónico:</h2> -->
     <div class="datos-perfil">
-      <label style="margin-right: 100px">Correo Electrónico: ADMIN</label>
-      <label >Número Telefónico: 1234</label>
+      <label style="margin-right: 100px">[[#{cliente.correo}]]: ADMIN</label>
+      <label >[[#{cliente.telefono}]]: 1234</label>
     </div>
     <div style="text-align: center">
-      <button class="botones-individual" style="margin-right: 230px">Actualizar Perfil</button>
-      <button class="botones-individual">Borrar Perfil</button>
+      <button class="botones-individual" style="margin-right: 230px">[[#{cliente.actualizar}]]</button>
+      <button class="botones-individual">[[#{cliente.borrar}]]</button>
     </div>
   </div>
 </section>

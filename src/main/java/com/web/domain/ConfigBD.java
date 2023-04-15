@@ -21,11 +21,12 @@ public class ConfigBD implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_articulo")
     private Long idArticulo;
+    private String tipo;
+    private String imagen;
     private String descripcion;
     private String detalle;
     private double precio;
     private int existencias;
-    private boolean activo;
 
     @JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria")
     @ManyToOne
@@ -34,13 +35,14 @@ public class ConfigBD implements Serializable {
     public ConfigBD() {
     }
 
-    public ConfigBD(String descripcion, String detalle, double precio,
-                    int existencias, boolean activo, Categoria categorie) {
+    public ConfigBD(String tipo, String imagen, String descripcion, String detalle, double precio,
+                    int existencias, Categoria categorie) {
+        this.tipo=tipo;
+        this.imagen=imagen;
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
         this.existencias = existencias;
-        this.activo = activo;
         this.categoria = categorie;
     }
 }

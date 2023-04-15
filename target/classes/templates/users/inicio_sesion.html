@@ -15,17 +15,17 @@
 <div class="contenedor-login">
   <img id="img-login" src="../../static/media/fondo.jpg" width="1500" />
   <div class="texto-sobre-imagen" style="text-align: center">
-    <label>Correo electrónico: </label><br>
+    <label>[[#{cliente.correo}]]:</label><br>
     <input type="email" name="Correo" size="25" />
     <br>
     <br>
-    <label>Contraseña: </label><br>
+    <label>[[#{cliente.contrasena}]]: </label><br>
     <input type="password" size="25" />
     <br> <br> <br>
-    <a th:href="@{/users/perfil}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">Iniciar Sesión</button></a>
+    <a th:href="@{/users/perfil}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">[[#{cliente.inicioS}]]</button></a>
     <br> <br> <br>
-    <label>Registrarse </label><br><br>
-    <a th:href="@{/users/registro}" style="text-decoration: none"><button class="botones-individual-login">Crear Cuenta</button></a>
+    <label>[[#{cliente.registrarse}]] </label><br><br>
+    <a th:href="@{/users/registro}" style="text-decoration: none"><button class="botones-individual-login">[[#{cliente.crearC}]]</button></a>
   </div>
 </div>
 

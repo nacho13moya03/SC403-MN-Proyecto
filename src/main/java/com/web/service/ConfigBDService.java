@@ -6,7 +6,7 @@ import java.util.List;
 public interface ConfigBDService {
 
     //Se recupera una lista con todos los registros de la tabla articulo
-    public List<ConfigBD> getArticulos(boolean activos);
+    public List<ConfigBD> getArticulos();
 
     //Se recupera el registro que tiene el idArticulo pasado por parámetro
     //si no existe en la tabla se retorna null

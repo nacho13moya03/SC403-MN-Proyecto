@@ -44,6 +44,14 @@
                       method="POST" class="was-validated">
                     <div class="modal-body">
                         <div class="mb-3">
+                            <label for="tipo">[[#{articulo.tipo}]]</label>
+                            <input type="text" class="form-control" name="tipo" required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagen">[[#{articulo.imagen}]]</label>
+                            <input type="url" class="form-control" name="imagen" required="true">
+                        </div>
+                        <div class="mb-3">
                             <label for="descripcion">[[#{articulo.descripcion}]]</label>
                             <input type="text" class="form-control" name="descripcion" required="true">
                         </div>
@@ -59,14 +67,7 @@
                             <label for="existencias">[[#{articulo.existencias}]]</label>
                             <input type="number" class="form-control" name="existencias">
                         </div>
-                        <div class="mb-3">
-                            <label for="imagen">[[#{articulo.imagen}]]</label>
-                            <input type="url" class="form-control" name="existencias">
-                        </div>
-                        <div class="mb-3">
-                            <label for="activo">[[#{articulo.activo}]]</label>
-                            <input type="checkbox" class="form-control" name="activo">
-                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary" type="submit">[[#{accion.guardar}]]</button>
@@ -147,6 +148,18 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="mb-3">
+                                            <label for="tipo">[[#{articulo.tipo}]]</label>
+                                            <input type="text" class="form-control"
+                                                   name="tipo" th:field="*{tipo}"
+                                                   required="true">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="imagen">[[#{articulo.imagen}]]</label>
+                                            <input type="url" class="form-control"
+                                                   name="imagen" th:field="*{imagen}"
+                                                   required="true">
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="descripcion">[[#{articulo.descripcion}]]</label>
                                             <input type="text" class="form-control"
                                                    name="descripcion" th:field="*{descripcion}"
@@ -168,11 +181,6 @@
                                             <label for="existencias">[[#{articulo.existencias}]]</label>
                                             <input type="number" class="form-control"
                                                    name="existencias" th:field="*{existencias}">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="activo">[[#{articulo.activo}]]</label>
-                                            <input type="checkbox" class="form-control"
-                                                   name="activo" th:field="*{activo}">
                                         </div>
                                     </div>
                                 </div>

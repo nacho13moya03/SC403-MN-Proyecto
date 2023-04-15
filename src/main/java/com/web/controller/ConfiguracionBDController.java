@@ -16,7 +16,7 @@ public class ConfiguracionBDController {
 
     @GetMapping("/configuracion")
     public String inicio(Model model) {
-        var articulos = catalogueService.getArticulos(false);
+        var articulos = catalogueService.getArticulos();
         model.addAttribute("articulos", articulos);
         model.addAttribute("totalArticulos", articulos.size());
         return "configuracion";
