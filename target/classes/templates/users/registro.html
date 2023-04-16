@@ -20,30 +20,30 @@
     <label style="font-size: 20px" id="titulo-sobre-imagen">[[#{cliente.registrar}]]</label><br><br>
     <div id="datos-registro-derecha">
       <label>[[#{cliente.nombre}]]: </label><br>
-      <input type="text" name="nombre" size="25" />
+      <input type="text" name="nombre" size="25" required/>
       <br>
       <br>
       <br>
       <label>[[#{cliente.correo}]]: </label><br>
-      <input type="email" name="correo" size="25" />
+      <input type="email" name="correo" size="25" required/>
       <br>
       <br>
       <br>
       <label>[[#{cliente.contrasena}]]: </label><br>
-      <input type="password" name="password" size="25" />
+      <input type="password" name="password" size="25" required/>
     </div>
     <div id="datos-registro-izquierda" style="margin-top: -12px">
       <label>[[#{cliente.apellidos}]]: </label><br>
-      <input type="text" name="apellidos" size="25" />
+      <input type="text" name="apellidos" size="25" required/>
       <br>
       <br>
       <br>
       <label>[[#{cliente.telefono}]]: </label><br>
-      <input type="text" name="telefono" size="25" />
+      <input type="text" name="telefono" size="25" required/>
     </div>
     <br> <br> <br>
     <div id="boton-sobre-imagen-registro">
-      <a th:href="@{/users/registroOK}" style="text-decoration: none"><button class="botones-individual-registro" style="background-color: green;margin-right: 200px;margin-top: -300px">[[#{cliente.registrar}]]</button></a>
+      <a th:href="@{/users/registroOK}" style="text-decoration: none"><button class="botones-individual-registro" style="background-color: green;margin-top: -300px">[[#{cliente.registrar}]]</button></a>
     </div>
 
     </form>

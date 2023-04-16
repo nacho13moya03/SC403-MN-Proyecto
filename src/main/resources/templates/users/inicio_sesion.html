@@ -15,19 +15,22 @@
 <div class="contenedor-login">
   <img id="img-login" src="../../static/media/fondo.jpg" width="1500" />
   <div class="texto-sobre-imagen" style="text-align: center">
+    <form th:action="@{/users/acceder}" method="post" >
     <label>[[#{cliente.correo}]]:</label><br>
-    <input type="email" name="Correo" size="25" />
+    <input type="email" name="correo" size="25" required/>
     <br>
     <br>
     <label>[[#{cliente.contrasena}]]: </label><br>
-    <input type="password" size="25" />
+    <input type="password" name="password" size="25" required/>
     <br> <br> <br>
     <a th:href="@{/users/perfil}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">[[#{cliente.inicioS}]]</button></a>
+    </form>
     <br> <br> <br>
     <label>[[#{cliente.registrarse}]] </label><br><br>
     <a th:href="@{/users/registro}" style="text-decoration: none"><button class="botones-individual-login">[[#{cliente.crearC}]]</button></a>
   </div>
 </div>
+
 
 
 
