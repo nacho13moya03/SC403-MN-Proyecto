@@ -308,6 +308,7 @@ input:-moz-placeholder {
 /* ---- PAGINA REGISTRO USUARIOS ----- */
 
 .botones-individual-registro{
+    text-align: center;
     display: inline;
     width: 120px;
     height: 35px;
