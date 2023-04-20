@@ -21,6 +21,18 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
+    @Transactional(readOnly=false)
+    public void deleteCliente(Cliente cliente) {
+        clienteDao.delete(cliente);
+    }
+
+    @Override
+    @Transactional(readOnly=true)
+    public Cliente getCliente(Cliente cliente) {
+        return clienteDao.findById(cliente.getIdCliente()).orElse(null);
+    }
+
+   /* @Override
     public Optional<Cliente> findById(Long idCliente) {
         return clienteDao.findById(idCliente);
     }
@@ -28,7 +40,17 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public Optional<Cliente> findByCorreo(String correo) {
         return clienteDao.findByCorreo(correo);
+    }*/
+
+    @Override
+    public Cliente getUserByEmail(String correo) {
+        return clienteDao.findByCorreo(correo);
     }
+
+  /*  public Optional<Cliente>  getUserById(Long idCliente) {
+        return clienteDao.findById(idCliente);
+    }*/
+
 
 }
 

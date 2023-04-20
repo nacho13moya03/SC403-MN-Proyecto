@@ -16,20 +16,35 @@
   <h1 id="titulos">[[#{cliente.perfil}]]</h1><br>
   <div style="text-align: center; padding-bottom: 80px" >
     <img class="circular--square" src="../../static/media/foto.jpg" />
-    <h2 style="text-align: center;color: black; font-size: 18px; font-weight: bolder">ADMIN</h2>
+    <h2 style="text-align: center;color: black; font-size: 18px; font-weight: bolder; margin-top: 6px" >[[${user.nombre}]] [[${user.apellidos}]]</h2>
     <!-- <h2 style="text-align: center;color: black; font-size: 18px; font-weight: lighter">Correo Electrónico:</h2> -->
     <div class="datos-perfil">
-      <label style="margin-right: 100px">[[#{cliente.correo}]]: ADMIN</label>
-      <label >[[#{cliente.telefono}]]: 1234</label>
-    </div>
-    <div style="text-align: center">
+      <label style="margin-right: 100px">[[#{cliente.correo}]]: [[${user.correo}]]</label>
+      <!--  <input type="text" class="form-control"
+              name="correo" th:field="*{users.correo}"
+              required="true" value="[[${user.correo}]]">-->
+       <label >[[#{cliente.telefono}]]: [[${user.telefono}]]</label>
+     </div>
+     <div style="text-align: center;padding: 5px" class="botones-individual">
+       <a th:href="@{/users/modificar/}+${user.idCliente}"
+          class="btn btn-success">
+         <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]
+       </a>
+     </div>
+     <div style="text-align: center; padding: 5px" class="botones-individual">
+       <a th:href="@{/users/eliminar/}+${user.idCliente}"
+          class="btn btn-danger">
+         <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+       </a>
+     </div>
+     <!-- <div style="text-align: center">
       <button class="botones-individual" style="margin-right: 230px">[[#{cliente.actualizar}]]</button>
-      <button class="botones-individual">[[#{cliente.borrar}]]</button>
-    </div>
-  </div>
-</section>
+     <button th:href="@{/users/eliminar/}+${user.idCliente}" class="botones-individual">[[#{cliente.borrar}]]</button>
+      </div>-->
+   </div>
+ </section>
 
-<footer th:replace="~{../layout/plantilla :: footer}"/>
-</body>
+ <footer th:replace="~{../layout/plantilla :: footer}"/>
+ </body>
 
-</html>
+ </html>

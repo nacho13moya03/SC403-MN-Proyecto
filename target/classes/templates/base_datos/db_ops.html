@@ -102,12 +102,14 @@
                                 <td>[[${articulo.descripcion}]]</td>
                                 <td class="text-end">¢[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</td>
                                 <td class="text-center">[[${articulo.existencias}]]</td>
-                                <td><a th:href="@{/base_datos/eliminar/}+${articulo.idArticulo}"
-                                       class="btn btn-danger">
-                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
+                                <td>
                                     <a th:href="@{/base_datos/modificar/}+${articulo.idArticulo}"
                                        class="btn btn-success">
-                                        <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]</a></td></tr>
+                                        <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]</a>
+                                    <a th:href="@{/base_datos/eliminar/}+${articulo.idArticulo}"
+                                       class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
+                                    </td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -172,7 +174,7 @@
                                                    required="true">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="precio">[[#{artoculo.precio}]]</label>
+                                            <label for="precio">[[#{articulo.precio}]]</label>
                                             <input type="number" class="form-control"
                                                    name="precio" th:field="*{precio}"
                                                    required="true">
