@@ -11,19 +11,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RequestMapping("/catalogue")
 public class CatalogosController {
 
-
-   // ArticuloService articuloService;
+    @Autowired
+    ArticuloService articuloService;
 
     @GetMapping("/catalogos")
     public String inicio(Model model) {
+        var articulos = articuloService.getArticulosCatalogos();
+        model.addAttribute("articulos", articulos);
+        model.addAttribute("totalArticulos",articulos.size());
         return "catalogos";
     }
 
-
-   /* @GetMapping("/listado")
+ /*  @GetMapping("/listado")
     public String listado(Model model) {
         //   var articulos = articuloService.getArticulos(false);
-        var articulos = articuloService.getArticulos()false;
+        var articulos = articuloService.getArticulosCatalogos();
         model.addAttribute("articulos", articulos);
         model.addAttribute("totalArticulos",articulos.size());
         return "/articulo/listado";

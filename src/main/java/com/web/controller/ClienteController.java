@@ -21,7 +21,7 @@ import java.util.Optional;
 @RequestMapping("/users")
 public class ClienteController {
 
-    private final Logger log = LoggerFactory.getLogger(RegistroController.class);
+    //private final Logger log = LoggerFactory.getLogger(RegistroController.class);
 
     @Autowired
     ClienteService clienteService;
