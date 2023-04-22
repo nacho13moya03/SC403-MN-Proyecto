@@ -24,15 +24,17 @@ public class Cliente implements Serializable  {
     private String correo;
     private String password;
     private String telefono;
+    private Long profile;
 
     public Cliente() {  }
 
-    public Cliente(String nombre, String apellidos, String correo, String password, String telefono) {
+    public Cliente(String nombre, String apellidos, String correo, String password, String telefono, Long profile) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
         this.password = password;
         this.telefono = telefono;
+        this.profile = profile;
     }
 
     public Long getIdCliente() {
@@ -81,5 +83,13 @@ public class Cliente implements Serializable  {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Long getprofile() {
+        return profile;
+    }
+
+    public void setprofile(Long profile) {
+        this.profile = profile;
     }
 }
