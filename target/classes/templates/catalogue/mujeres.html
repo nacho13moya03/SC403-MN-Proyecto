@@ -21,11 +21,12 @@
     <section id="articulos" style="margin-top: 35px">
         <div class="container">
             <div class="row row-cols-5" style="margin-left: 170px"
-                 th:if="${articulos != null and !articulos.empty}">
-                <div class="card" th:each="articulo : ${articulosCategoria3}" style="margin: 5px">
+                 th:if="${art != null }">
+                <div class="card" th:each="articulo : ${art}" style="margin: 5px">
+                    <input type="hidden" name="idArticulo" th:value="${articulo.idArticulo}"/>
                     <!-- <div th:if="${articulo.categoria == 3L}">-->
                      <div class="card-body">
-                         <a href="#">
+                         <a th:href="@{/catalogue/producto/}+${articulo.idArticulo}">
                              <figure style="text-align: center">
                                  <img th:src="@{${articulo.imagen}}" width="120"/>
                              </figure>
@@ -44,14 +45,14 @@
                     <!--  </div>-->
                       </div>
                   </div>
-                  <div th:if="${articulos == null or articulos.empty}">
-                      [[#{carrito.no_mostrar}]]
-                  </div>
-              </div>
-          </section>
-      </section>
+            <!--  <div th:if="${articulos == null or articulos.empty}">
+                 [[#{carrito.no_mostrar}]]
+             </div>-->
+         </div>
+     </section>
+ </section>
 
-      <footer th:replace="~{../layout/plantilla :: footer}"/>
-      </body>
+ <footer th:replace="~{../layout/plantilla :: footer}"/>
+ </body>
 
-      </html>
+ </html>

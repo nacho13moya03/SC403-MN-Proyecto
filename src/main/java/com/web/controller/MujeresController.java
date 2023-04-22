@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -31,12 +33,28 @@ public class MujeresController {
         return "mujeres";
     }*/
 
-    @Autowired
-    private ArticuloDao articuloDao;
 
   @GetMapping("/mujeres")
    public String inicio(Model model) {
-      List<Articulo> articulosCategoria3 = articuloDao.findByCategoria(3L);
+     /* var articulos = articuloService.getArticuloCatalogo(articulo);
+      Long cat = articulos.getCategoria().getIdCategoria();
+      if(cat==3L){
+          model.addAttribute("articulos", articulos);
+      }*/
+
+      var articulos = articuloService.getArticulosCatalogos();
+      List art = new ArrayList(); ;
+      //model.addAttribute("articulos", articulos);
+      //var articulos = articuloService.getArticuloCatalogo(art.);
+     /* var articulos = articuloService.getArticuloCatalogo(art);
+      Long cat = articulos.getCategoria().getIdCategoria();*/
+      for (var a:articulos) {
+          if (a.getCategoria().getIdCategoria()==3L) {
+              art.add(a);
+          }
+      }
+      model.addAttribute("art", art);
+     /* List<Articulo> articulosCategoria3 = articuloDao.findByCategoria(3L);
       model.addAttribute("articulosCategoria3", articulosCategoria3);
       /* var articulos = articuloService.getArticulosCatalogos();
        model.addAttribute("articulos", articulos);
