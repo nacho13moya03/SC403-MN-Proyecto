@@ -32,6 +32,12 @@ public class ClienteController {
         return "redirect:/users/registroOK";
     }
 
+    @PostMapping("/guardarActualizado")
+    public String guardarActualizado(Cliente cliente) {
+        clienteService.saveCliente(cliente);
+        return "redirect:/users/perfil";
+    }
+
     @GetMapping("/eliminar/{idCliente}")
     public String eliminarCliente(Cliente cliente) {
         clienteService.deleteCliente(cliente);
@@ -42,7 +48,7 @@ public class ClienteController {
     public String modificaCliente(Cliente cliente, Model model) {
         cliente = clienteService.getCliente(cliente);
         model.addAttribute("cliente", cliente);
-        return "/users/perfil";
+        return "/modificar_perfil";
     }
 
   /*  @PostMapping("/acceder")

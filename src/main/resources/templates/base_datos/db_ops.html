@@ -102,14 +102,15 @@
                                 <td>[[${articulo.descripcion}]]</td>
                                 <td class="text-end">¢[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</td>
                                 <td class="text-center">[[${articulo.existencias}]]</td>
-                                <td>
+                                <td style="width:250px;">
                                     <a th:href="@{/base_datos/modificar/}+${articulo.idArticulo}"
                                        class="btn btn-success">
                                         <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]</a>
                                     <a th:href="@{/base_datos/eliminar/}+${articulo.idArticulo}"
                                        class="btn btn-danger">
                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
-                                    </td></tr>
+                                    </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
