@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{../layout/plantilla :: head-2}">
+    <meta charset="UTF-8">
+    <title>Sincronías Official Site | Child Catalog</title>
+</head>
+
+<body>
+
+<header th:replace="~{../layout/plantilla :: header}"/>
+
+<section style="background-color:#f5f0eb;padding-bottom: 50px">
+    <div class="enlaces-catalogo">
+        <a th:href="@{/catalogue/mujeres}" id="enlace-individual-catalogo">[[#{ropa.mujer}]]</a>
+        <a th:href="@{/catalogue/hombres}" id="enlace-individual-catalogo" >[[#{ropa.hombre}]]</a>
+        <a th:href="@{/catalogue/niños}" id="enlace-individual-catalogo" style="font-weight: bold">[[#{ropa.ninos}]]</a>
+        <a th:href="@{/catalogue/bebes}" id="enlace-individual-catalogo" >[[#{ropa.bebes}]]</a>
+    </div>
+    <section id="articulos" style="margin-top: 35px">
+        <div class="container">
+            <div class="row row-cols-5" style="margin-left: 170px"
+                 th:if="${art != null }">
+                <div class="card" th:each="articulo : ${art}" style="margin: 5px">
+                    <input type="hidden" name="idArticulo" th:value="${articulo.idArticulo}"/>
+                    <!-- <div th:if="${articulo.categoria == 3L}">-->
+                    <div class="card-body">
+                        <a th:href="@{/catalogue/producto/}+${articulo.idArticulo}">
+                            <figure style="text-align: center">
+                                <img th:src="@{${articulo.imagen}}" width="120"/>
+                            </figure>
+                        </a>
+
+                        <!--<form>
+                            <input type="hidden" name="texto" th:value="${articulo.idArticulo}"/>
+                            <input type="hidden" name="texto" th:value="${articulo.existencias}"/>
+                            <button class="btn btn-ligth" id="addCar"
+                                    name="addCar" onclick="addCard(this.form)"
+                                    type="button">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </form>-->
+                    </div>
+                    <!--  </div>-->
+                </div>
+            </div>
+            <!--  <div th:if="${articulos == null or articulos.empty}">
+                 [[#{carrito.no_mostrar}]]
+             </div>-->
+        </div>
+    </section>
+</section>
+
+
+<footer th:replace="~{../layout/plantilla :: footer}"/>
+</body>
+
+</html>

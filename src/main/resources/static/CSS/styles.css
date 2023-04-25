@@ -1,0 +1,396 @@
+/***********************
+ * Essential Structure *
+ ***********************/
+.flexsearch--wrapper {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+    position: static;
+}
+
+.flexsearch--form {
+    overflow: hidden;
+    position: relative;
+}
+
+.flexsearch--input-wrapper {
+    padding: 0 65px 0 0;
+    overflow: hidden;
+}
+
+.flexsearch--input {
+    width: 100%;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+.flexsearch {
+    padding: 0 200px 0 220px;
+}
+
+.flexsearch--input,
+#icons,
+.company_name {
+    display: flex;
+    align-items: center;
+}
+
+.flexsearch--input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 35px;
+    padding: 0 45px 0 11px;
+    /*border-color: #888;*/
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 4px;
+    margin-top: 10px;
+    /*color: #333;*/
+    border-color: #F2F4F6;
+    background-color: #F2F4F6;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+}
+
+.flexsearch--submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    margin-top: 2px;
+    margin-right: 10px;
+    background: transparent;
+    color: #888;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.flexsearch--input:focus {
+    outline: none;
+    /*border-color: #333;*/
+    border-color: #e1e7ed;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+    color: #333;
+}
+
+.flexsearch--submit:hover {
+    color: #e1e7ed;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #888;
+}
+
+input:-moz-placeholder {
+    color: #888
+}
+
+.company_name {
+    float: left;
+    margin: 10px 0px 0px 20px;
+    color: #333;
+    font-family: 'Monotype Corsiva', italic;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+}
+
+
+#icons {
+    margin-top: 15px;
+    margin-right: 40px;
+    align-items: end;
+    float: right;
+}
+
+#encabezado {
+    margin: 15px 10px 10px 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#but {
+    display: inline;
+    font-family: Rockwell;
+    font-style:normal;
+    font-size: 18px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    background: none;
+}
+
+.enlaces{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#enlace-individual{
+    display: inline;
+    font-family: Rockwell;
+    font-style:normal;
+    font-size: 17px;
+    padding: 10px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+#footer {
+    background-color: #EBDED3;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom:1px;
+    margin: 10px auto;
+    display: block;
+}
+
+#infofooter{
+    color: #888;
+    margin-top: 0.5em;
+}
+
+/* ----- PAGINA INFORMATIVA ----- */
+
+#titulos{
+    text-align: center;
+    color: black;
+    font-family: Monotype Corsiva;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#seccionInformativa{
+    background-color: white;
+    padding-top: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 1000px
+}
+
+.textoInformativo {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* ----- PAGINA PERFIL ----- */
+
+.circular--square {
+    border-radius: 50%;
+    width: 140px;
+}
+
+.datos-perfil{
+    padding-top: 2em;
+    color: black;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.botones-individual{
+    display: inline;
+    width: 130px;
+    height: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    color:black;
+    border-color: #888;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+/* ----- PAGINA CATALOGOS ----- */
+
+.enlaces-catalogo{
+    padding-top: 40px;
+    text-align: center;
+}
+
+#enlace-individual-catalogo{
+    display: inline;
+    /*font-family: Rockwell;
+    font-style:normal;*/
+    font-size: 17px;
+    padding: 10px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.contenedor{
+    padding-bottom: 500px;
+}
+
+/* ---- PAGINA COMPRA FINALIZADA ----*/
+
+.contenedor-compra{
+    padding-bottom: 223px;
+}
+.botones-individual-compraFinalizada{
+    display: block;
+    width: 200px;
+    height: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    color:black;
+    border-color: #888;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+    cursor: pointer;
+}
+
+/* ---- PAGINA LOGIN ----*/
+
+#img-login{
+    margin:10px auto;
+    display: block;
+    width: 1500px;
+    opacity: 0.4;
+}
+
+.contenedor-login{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto-sobre-imagen{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botones-individual-login{
+    display: block;
+    width: 200px;
+    height: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    color:black;
+    border-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 110px;*/
+    cursor: pointer;
+}
+
+/* ---- PAGINA REGISTRO USUARIOS ----- */
+
+.botones-individual-registro{
+    text-align: center;
+    display: inline;
+    width: 120px;
+    height: 35px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    color:black;
+    border-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 110px;*/
+    cursor: pointer;
+}
+#titulo-sobre-imagen{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#datos-registro-derecha{
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#datos-registro-izquierda{
+    position: absolute;
+    top: 31%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#boton-sobre-imagen-registro{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* -------------------- */
+#title {
+    text-align: center;
+    color: rgb(1, 1, 0);
+}
+
+p {
+    color: rgb(1, 1, 0);
+}
+
+#Registro {
+    text-align: center;
+    color: burlywood;
+}
+
+#loginform {
+    text-align: center;
+    color: burlywood;
+}
+
+#tips h2 {
+    text-align: left;
+    color: burlywood;
+}
+
+.pie-form {
+    font-size: 90%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: burlywood;
+    margin-bottom: 3px;
+}
+
+#img_prin{
+    margin:10px auto;
+    display: block;
+    width: 1500px;
+}

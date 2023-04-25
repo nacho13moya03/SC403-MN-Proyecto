@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{../layout/plantilla :: head-2}">
+  <meta charset="UTF-8">
+  <title>Sincronías Official Site | About US</title>
+</head>
+
+<body>
+
+<header th:replace="~{../layout/plantilla :: header}"/>
+
+<section style="background-color:#f5f0eb">
+  <br>
+  <h1 id="titulos">[[#{plantilla.acercade}]]</h1>
+  <div id="seccionInformativa">
+    <h2 style="text-align: center;color: black; font-size: 18px">[[#{info.misiont}]]</h2>
+    <p class="textoInformativo">[[#{info.mision}]]</p>
+    <br>
+    <h2 style="text-align: center;color: black; font-size: 18px">[[#{info.visiont}]]</h2>
+    <p class="textoInformativo">[[#{info.vision}]]</p>
+    <br>
+    <h2 style="text-align: center;color: black; font-size: 18px">[[#{info.sucursales}]]</h2>
+    <div style="text-align: center">
+      <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15716.895765067016!2d-84.13064632603896!3d9.998351985635693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0faddaded66bd%3A0x2527e99d1a1e0bdf!2sHeredia!5e0!3m2!1ses!2scr!4v1675536685554!5m2!1ses!2scr"
+              width="550" height="400" style="border:0;"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <br>
+    <br>
+    <h2 style="text-align: center;color: black; font-size: 18px">[[#{info.contacto}]]</h2>
+    <p class="textoInformativo">[[#{info.correo}]]</p>
+    <p class="textoInformativo">[[#{info.telefono}]]</p>
+    <br>
+  </div>
+  <br><br><br>
+</section>
+
+<footer th:replace="~{../layout/plantilla :: footer}"/>
+</body>
+
+</html>
