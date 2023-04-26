@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="~{layout/plantilla :: head-2}">
+  <meta charset="UTF-8">
+  <title>Sincronías Official Site | Fashion Clothes</title>
+</head>
+
+<body>
+
+<header th:replace="~{layout/plantilla :: header}"/>
+
+<section style="background-color:#f5f0eb; padding-bottom: 70px">
+  <br>
+  <h1 id="titulos">[[#{pagar.titulo}]]</h1><br>
+  <form  method="post" >
+    <label>[[#{pagar.tarjeta}]]:</label><br>
+    <label>[[#{pagar.nombre}]]:</label><br>
+    <input type="text" name="nombre" size="25" required/>
+    <br>
+    <br>
+    <label>[[#{pagar.numero}]]:</label><br>
+    <input type="text" name="numero" size="25" required/>
+    <br>
+    <br>
+    <label>[[#{pagar.vencimiento}]]:</label><br>
+    <input type="text" name="vence" size="25" required/>
+    <br>
+    <br>
+    <label>[[#{pagar.codigo}]]: </label><br>
+    <input type="password" name="codigo" size="25" required/>
+    <br> <br> <br>
+    <a th:href="@{/carrito/compraCompleta}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">[[#{pagar.pagar}]]</button></a>
+  </form>
+</section>
+<footer th:replace="~{layout/plantilla :: footer}"/>
+</body>
+</html>

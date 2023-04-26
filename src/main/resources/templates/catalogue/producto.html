@@ -15,9 +15,8 @@
   <h1 id="titulos">[[#{producto.titulo}]]</h1>
   <section id="articulos" style="margin-top: 35px">
     <div class="container">
-      <div class="row row-cols-2" style="margin-left: 410px">
+      <div class="row row-cols-2" style="margin-left: 420px">
         <div class="card" style="margin: 5px">
-          <!-- <div th:if="${articulo.categoria == 3L}">-->
           <div class="card-body">
             <figure style="text-align: center">
               <img th:src="@{${articulo.imagen}}" width="120"/>
@@ -32,43 +31,14 @@
             <form>
               <input type="hidden" name="texto" th:value="${articulo.idArticulo}"/>
               <input type="hidden" name="texto" th:value="${articulo.existencias}"/>
-              <button class="btn btn-outline-success" id="addCar"
-                      name="addCar" onclick="addCard(this.form)"
-                      type="button">
+              <a th:href="@{/carrito/agregar/}+${articulo.idArticulo}"
+                      class="btn btn-outline-success">
                 <i class="fas fa-cart-plus"></i> [[#{producto.anadir}]]
-              </button>
+              </a>
               <button style="margin-left: 130px" class="btn btn-success" id="comprar"
                       name="comprar"
                       type="button">
                  [[#{producto.comprar}]]
-              </button>
-            </form>
-          </div>
-
-        </div>
-      </div>
-      <div class="row row-cols-2" style="margin-left: 170px"
-           th:if="${articulos != null and !articulos.empty}">
-        <div class="card" th:each="articulo : ${articulos}" style="margin: 5px">
-          <!-- <div th:if="${articulo.categoria == 3L}">-->
-          <div class="card-body">
-              <figure style="text-align: center">
-                <img th:src="@{${articulo.imagen}}" width="120"/>
-              </figure>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">[[${articulo.descripcion}]]</h5>
-            <h7 class="card-title">[[${articulo.detalle}]]</h7>
-            <figure style="text-align: center">
-              [[${articulo.precio}]]
-            </figure>
-            <form>
-              <input type="hidden" name="texto" th:value="${articulo.idArticulo}"/>
-              <input type="hidden" name="texto" th:value="${articulo.existencias}"/>
-              <button class="btn btn-ligth" id="addCar"
-                      name="addCar" onclick="addCard(this.form)"
-                      type="button">
-                <i class="fas fa-cart-plus"></i>
               </button>
             </form>
           </div>

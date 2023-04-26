@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="~{layout/plantilla :: head-2}">
+    <meta charset="UTF-8">
+    <title>Sincronías Official Site | Fashion Clothes</title>
+</head>
+
+<body>
+
+<header th:replace="~{layout/plantilla :: header}"/>
+<section style="background-color:#f5f0eb; padding-bottom: 70px">
+    <br>
+    <h1 id="titulos">[[#{carrito.titulo}]]</h1><br>
+<div class="container">
+    <div class="row row-cols-2">
+        <div class="card">
+            <div class="card-header">
+                [[#{carrito.datos}]]
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">[[${item.descripcion}]]</h5>
+                <h6 class="card-subtitle mb-2 text-muted text-end">
+                    [[${item.precio}+' ('+${item.existencias}+')']]</h6>
+                <p class="card-text">[[${item.detalle}]]</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <figure>
+                    <img th:src="@{${item.imagen}}" width="120"/>
+                </figure>
+                <form th:action="@{/carrito/guardar}"
+                      method="post"
+                      th:object="${item}">
+                    <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>
+                    <div class="form-group">
+                        <label for="cantidad">[[#{carrito.cantidad}]]:</label>
+                        <input type="number" name="cantidad" th:field="*{cantidad}"
+                               min='1' th:max="${item.existencias}"/>
+                    </div>
+                    <div class="form-group" style="margin-top: 20px">
+                        <button class="btn btn-success" type="submit" name="guardar">
+                            <i class='fas fa-save'></i> [[#{accion.guardar}]]
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<footer th:replace="~{layout/plantilla :: footer}"/>
+</body>
+</html>
