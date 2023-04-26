@@ -35,11 +35,11 @@
                       class="btn btn-outline-success">
                 <i class="fas fa-cart-plus"></i> [[#{producto.anadir}]]
               </a>
-              <button style="margin-left: 130px" class="btn btn-success" id="comprar"
+              <a th:href="@{/carrito/pago}" style="margin-left: 130px" class="btn btn-success" id="comprar"
                       name="comprar"
                       type="button">
                  [[#{producto.comprar}]]
-              </button>
+              </a>
             </form>
           </div>
 

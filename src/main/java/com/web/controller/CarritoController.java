@@ -56,7 +56,7 @@ public class CarritoController {
         model.addAttribute("listaItems", lista);
         model.addAttribute("listaTotal", totalCarritos);
         model.addAttribute("carritoTotal", carritoTotalVenta);
-        return new ModelAndView("/carrito/fragmentosCarrito :: verCarrito");
+        return new ModelAndView("/carrito/verCarrito");
     }
 
     //Para mofificar un articulo del carrito
@@ -82,15 +82,6 @@ public class CarritoController {
     }
 
     //Para pagar
-
-    @GetMapping("/compraCompleta")
-    public String compraF(Model model) {
-        return "redirect:/carrito/compraFinalizada";
-    }
-    @GetMapping("/carrito")
-    public String pago(Model model) {
-        return "/pago";
-    }
     @GetMapping("/facturar")
     public String facturarCarrito() {
         return "redirect:/carrito/facturar";

@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/carrito")
-public class Metodo_PagoController {
-    @GetMapping("/pago")
+public class CompraFinalizada {
+    @GetMapping("/compraFinalizada")
     public String inicio(Model model) {
-        return "pago";
+        return "compraFinalizada";
     }
 }

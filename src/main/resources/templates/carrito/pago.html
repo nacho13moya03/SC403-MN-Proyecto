@@ -13,8 +13,8 @@
 <section style="background-color:#f5f0eb; padding-bottom: 70px">
   <br>
   <h1 id="titulos">[[#{pagar.titulo}]]</h1><br>
-  <form  method="post" >
-    <label>[[#{pagar.tarjeta}]]:</label><br>
+  <div style="text-align: center" >
+    <label style="font-weight: bold">[[#{pagar.tarjetas}]]</label><br><br>
     <label>[[#{pagar.nombre}]]:</label><br>
     <input type="text" name="nombre" size="25" required/>
     <br>
@@ -27,11 +27,11 @@
     <input type="text" name="vence" size="25" required/>
     <br>
     <br>
-    <label>[[#{pagar.codigo}]]: </label><br>
+    <label>[[#{pagar.seguridad}]]: </label><br>
     <input type="password" name="codigo" size="25" required/>
     <br> <br> <br>
-    <a th:href="@{/carrito/compraCompleta}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">[[#{pagar.pagar}]]</button></a>
-  </form>
+    <a th:href="@{/carrito/compraFinalizada}" style="text-decoration: none"><button class="botones-individual-login" style="background-color: green">[[#{pagar.pagar}]]</button></a>
+  </div>
 </section>
 <footer th:replace="~{layout/plantilla :: footer}"/>
 </body>
